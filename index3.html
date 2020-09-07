@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="Utf-8">
+        <link href="index.css" rel="stylesheet">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div id="sin_In">
+            <form id="Sin">
+                <div>
+                    <h1 id="Header">Log_in</h1>
+                    <label for="Sname">Mail</label><br>
+                    <input type="text"id="Mail"name="Mail"placeholder="Type Your Mail"><br>
+                    <label for="Pass">Password</label><br>
+                    <input type="password"id="Pass"name="Pass"placeholder="Type Your Last_Name"><br>
+                    <input name="Send"id="Send"Value="Submit"Type="submit"> 
+                        
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+
+<?php 
+    if(isset($_GET['Send']))
+    {
+        $FName=$LName=$EMail=$Password='';
+        if(isset($_GET['Fname']))
+        {
+            $FName=$_GET['Fname'];
+        }
+        if(isset($_GET['Lname']))
+        {
+            $LName=$_GET['Lname'];
+        }
+        if(isset($_GET['Mail']))
+        {
+            $EMail=$_GET['Mail'];
+        }
+        if(isset($_Get['Pass']))
+        {
+            $Password=$_GET['Pass'];
+        }

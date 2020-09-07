@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="sin_In">
+            <form method="POST" id="Sin">
+                <div>
+                    <h1 id="Header">Udate_User_Info</h1>
+                    <label for="Fname">First_Name</label> <br>
+                    <input type="text" id="Fname"name="Fname"placeholder="Type your F_Name"><br>
+                    <label for="Sname">Second_Name</label><br>
+                    <input type="text"id="Lname"name="Lname"placeholder="Type Your Last_Name"><br>
+                    <label for="Pass">Password</label><br>
+                    <input type="password"id="Pass"name="Pass"placeholder="Type Your Last_Name"><br>
+                    <input name="Send"id="Send"Value="Submit"Type="submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+<?php 
+    if(isset($_GET['Send']))
+    {
+        $FName=$LName=$EMail=$Password='';
+        if(isset($_GET['Fname']))
+        {
+            $FName=$_GET['Fname'];
+        }
+        if(isset($_GET['Lname']))
+        {
+            $LName=$_GET['Lname'];
+        }
+        if(isset($_GET['Mail']))
+        {
+            $EMail=$_GET['Mail'];
+        }
+        if(isset($_Get['Pass']))
+        {
+            $Password=$_GET['Pass'];
+        }
+        $host='localhost';
+        $user='root';
+        $Pass='';
+        $db='project';
+        $conn=mysqli_connect($host,$user,$Pass,$db);
+        if($conn)
+        {
+            echo "connected";
+        }
+        else
+        {
+            echo "No";
+        }
+        $sql = mysqli_query($conn, 'SELECT * FROM user ');
+        while($row = mysqli_fetch_array($sql)) {
+            $names[] = $row['Email'];
+        }
+        if (in_array($EMail, $names,true)) 
+        { 
+            echo "this is mail is already exist";
+            echo "you should login"; 
+        } 
+        else
+        {
+            $insert="insert into user values('$FName','$LName','$EMail','$Password')";
+            session_start();
+            $_SESSION['Mail']=$EMail;
+            $_SESSION['Password']=$Password;
+            mysqli_query($conn,$insert);
+            echo $_SESSION['Mail']."<br>";
+            echo $_SESSION['Password']."<br>";
+        }

@@ -1,0 +1,11 @@
+		Wellcome 
+
+You can sign up or sing in as:-
+	- admin 
+	- user
+You can do many operations on books like:-
+	- Add a book
+	- Updating book Info
+	- Borrowing a book
+	- Browsing a book
+ 	- Return a borrowed book

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="index1.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="Ba" style=" background-image:url('Image.jpeg') ">
+        <ul>
+            <li>
+                <a href="index0.html" target="_self">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_self">
+                    Registration Options
+                </a>
+                <ul>
+                    <li>
+                        <a href="index2.php" target="_self">
+                            Sing Up
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index3.php" target="_self">
+                            Log in
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index4.php" target="_self">
+                            update
+                        </a>
+                    </li>
+                    <li>
+                        <a href="send_mail.php" target="_self">
+                            send mail
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" target="_self">
+                    Book Options
+                </a>
+                <ul>
+                    <li>
+                        <a href="index5.php" target="_self">
+                            Add Book
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index6.php" target="_self">
+                            Updating Book
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index8.php" target="_self">
+                            Browsing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index9.php" target="_self">
+                            Borrowing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index10.php" target="_self">
+                            Return Borrowing Book
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index11.php" target="_self">
+                            extending Date
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index13.php">
+                            Filter By
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="get()">
+                    Our Services
+                </a>
+            </li>
+            <li>
+                <a href="index7.php" target="_self">
+                    log out
+                </a>
+            </li>
+        </ul>
+        <br>
+        <div class="text_contain">
+            <h1 style="
+                margin-top:360px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 45px;
+                color:rgb(246, 250, 249);
+                ">
+                Welcome
+            </h1>
+            <p style="color:white;font-size:300;">
+                Borrow Your Book now and enjoy with hiegh Qualtiy of Services <br>
+                and you( the Admin) can mantain your Books and retuen Late Borrowing
+                <br>
+                <span> Very nice enjoying with our Website </span>
+        </div>
+        <div id="about">
+        </div>
+        <script>
+            function Say_Welcome() {
+                alert("Welcome to you in Our Websites");
+            }
+            var req = new XMLHttpRequest();
+            function get() {
+
+                if (req.status === 200 && req.readyState === 4) {
+                    document.getElementById("about").innerHTML = '<h1 id="An2" >About</h1>' +
+                        '<img src="hero_1.jpg"alt="hero1_image"class="AbImag" style="width:510px;height:330px; margin-top:30px   ">' +
+                        '<p class="p1">for the next great business</p>';
+                    var len = req.responseText.length;
+                    var text = '';
+                    var index = 0;
+                    for (var i = 0; i < len; i++) {
+
+                        text += req.responseText[i];
+                        index++;
+                        if (index == 46) {
+
+                            text += "<br>";
+                            index = 0;
+                        }
+                    }
+                    document.getElementById("about").innerHTML += text;
+                    text += "</ol>";
+
+                }
+            }
+            req.open('GET', 'ajax.txt', true);
+            req.send();
+            var len = req.length; 
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+#Ba
+{
+    background-image: url('Image.JPEG');
+    background-size:cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:white;
+    width:1350px;
+    height:650px;
+    background-attachment: fixed;
+}
+*
+{
+    margin:0px;
+    padding:0px;
+}
+ul{
+    list-style: none;
+}
+ul li
+{
+    float:left;
+    width:265px;
+    height: 50px;
+    background-color: black;
+    opacity: .7;
+    line-height: 40px;
+    text-align: center;
+    font-size:20px;
+    margin-right:2px;
+}
+ul li a
+{
+    text-decoration: none;
+    color:white;
+    display: block;
+
+}
+ul li a:hover{
+    background-color: green;
+}
+ul li ul li
+{
+    display: none;
+}
+ul li:hover ul li
+{
+    display: block;
+}
+
+#Header
+{
+    color:navy;
+    margin:auto;
+    text-align: center;
+    margin-top:200px;
+}
+#Sin input,label
+{
+    margin-left:500px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    height: 30px;
+    width:300px;   
+}
+#Sin input{
+    background-color:palegoldenrod;
+    border:2px red solid;
+    border-radius: 10px;
+}
+#Sin label
+{
+    font-size:25px;
+}
+#Sin #Send{
+    margin-left:610px;
+    margin-top:30px;
+    width:120px;
+    height:30px;
+    border: 2px red solid;
+    border-radius: 10px;
+    background-color: yellowgreen;
+}
+p
+{
+    margin-top:30px;
+    margin-left:440px;
+    color:black;
+    font-weight: 700;
+    font-size:20px;
+}
+#our
+{
+    margin-top:40px;
+    background-color: aliceblue;
+    border:3px red groove;
+    border-radius: 5px;   
+}
+.bnt1
+{
+    width:150px;
+    height: 35px;
+    border-radius: 20px;
+    background:rgb(13, 177, 100);
+    margin-top:50px;
+    margin-left:550px;
+    text-transform: capitalize;
+    margin-top:40px;
+}
+
+.text_contain h1{
+    margin-top:120px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    text-align: center;
+    color:rgb(246, 250, 249);
+}    
+.text_contain p
+{
+    font-size:20px;
+    margin-left: 400px;
+    color:yellowgreen;   
+}
+.text_contain p span{
+    margin-left: 150px;
+}
+#about
+{
+    color:rgb(36, 35, 35);
+    font-size:25px;
+    margin-right:40px;
+    line-height: 150%;
+    margin-top:200px;
+}
+#An2
+{
+    margin-top:50px;
+    margin-left:570px;
+    color:blue;
+}
+.AbImag
+{
+    width:490px;
+    height:370px;
+    margin-left :60px;
+    margin-right :60px;
+    margin-bottom :60px;
+    float:left; 
+}
+.correct
+{
+    list-style-type:square;
+}
+#footer
+{
+    width:100%;
+    height:80px;
+    background-color: rgb(206, 209, 199);
+}
