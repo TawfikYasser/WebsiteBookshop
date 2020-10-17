@@ -10,7 +10,7 @@ he can filter Search using(Author or Publication Year or its Parts).
 
 ###### Technologies
 
-* Html: The structures of the website.
+* HTML5: The structures of the website.
 * JavaScript: Error Handling.
 * PHP: Session, Cookies, Databases, Mail Function.
 * MySql: Databases tables.
@@ -19,4 +19,4 @@ he can filter Search using(Author or Publication Year or its Parts).
 * Sessions
 * Cookies
 * Ajax: Our services.
-* CSS &CSS3: In format & Design.
+* CSS & CSS3: In format & Design.
